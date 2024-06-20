@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Socket Io</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+  </head>
+  <body>
+    <p>Hello World</p>
+
+    <script>
+      var socket = io();
+
+
+      socket.on('newuserconnect',function(data){
+        document.body.innerHTML=""
+        document.write(data.message)
+      })
+
+
+
+    //   setTimeout(function(){
+    //     socket.emit('myCustromEventFromClient','Client size from server size sending')
+    //   })
+  
+
+    </script>
+  </body>
+</html>
